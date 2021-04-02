@@ -21,7 +21,7 @@ class RiotApiController {
 
         
 
-        const link =`https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${nickEdit}?api_key=RGAPI-4be01106-a2e8-42b4-b7aa-ec17f183b2c5`
+        const link =`https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${nickEdit}?api_key=`
         const encode = encodeURI(link)    
              
         const result = await axios.get(encode).then( response =>{return response.data} )
