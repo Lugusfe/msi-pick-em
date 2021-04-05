@@ -2,14 +2,13 @@ import { Request, Response } from 'express'
 import { getCustomRepository } from 'typeorm'
 import { hash } from 'bcryptjs'
 import UserRepository from '../repositories/UserRepository'
-
+import RiotApiController from './RiotApiController'
 
 
 class UserController {
 
     async create(request: Request, response:Response) {
         const userRepository = getCustomRepository(UserRepository)
-
         const { name, nick, password } = request.body;
 
         const existUser = await userRepository.findOne({nick})

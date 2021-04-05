@@ -17,6 +17,7 @@ class User {
 
     @CreateDateColumn()
     created_at: Date;
+
 }
 
 export default User
